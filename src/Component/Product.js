@@ -26,7 +26,7 @@ export default function Product(props) {
           <button type="button" class="btn btn-warning">
             {props.product.quantity}
           </button>
-          <button type="button" class="btn btn-success" onClick={this.incrementQuantity ()}>
+          <button type="button" class="btn btn-success" onClick={() => {props.incrementQuantity (props.index)}}>
             + 
           </button>
         </div>
