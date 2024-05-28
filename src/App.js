@@ -4,14 +4,14 @@ import Navbar from './Component/Navbar';
 import ProductList from './Component/ProductList';
 
 function App() {
-  const product = [
+  const productList = [
     {
       price: 99999,
       name: "iPhone 15 Pro",
       quantity: 0,
     },
     {
-      price: 99999,
+      price: 89999,
       name: "Realme 15 Pro",
       quantity: 0,
     }
@@ -19,8 +19,10 @@ function App() {
   return (
     <>
     <Navbar/>
-    <ProductList product={product}/>
-    <Footer/>
+    <main className='container mt-5'>
+    <ProductList productList={productList}/>
+    </main>
+    {/* <Footer/> */}
     </>
   );
 }
