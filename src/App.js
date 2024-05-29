@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./Component/Navbar";
 import ProductList from "./Component/ProductList.js";
 import React, { useState } from "react";
+import Footer from "./Component/Footer.js";
 
 function App() {
   let products = [
@@ -44,7 +45,7 @@ function App() {
           decrementQuantity={decrementQuantity}
         />
       </main>
-      {/* <Footer/> */}
+      <Footer/>
     </>
   );
 }
