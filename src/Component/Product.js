@@ -1,10 +1,7 @@
 import React from "react";
 
 export default function Product(props) {
-
-    function incrementQuantity(index){
-
-    }
+  function incrementQuantity(index) {}
 
   return (
     <div className="row">
@@ -20,19 +17,27 @@ export default function Product(props) {
           role="group"
           aria-label="Basic mixed styles example"
         >
-          <button type="button" class="btn btn-danger">
+          <button type="button" class="btn btn-danger" onClick={() => {
+              props.decrementQuantity(props.index);
+            }}>
             -
           </button>
           <button type="button" class="btn btn-warning">
             {props.product.quantity}
           </button>
-          <button type="button" class="btn btn-success" onClick={() => {props.incrementQuantity (props.index)}}>
-            + 
+          <button
+            type="button"
+            class="btn btn-success"
+            onClick={() => {
+              props.incrementQuantity(props.index);
+            }}
+          >
+            +
           </button>
         </div>
       </div>
       <div className="col-4">
-         {props.product.quantity*props.product.price}
+        {props.product.quantity * props.product.price}
       </div>
     </div>
   );
