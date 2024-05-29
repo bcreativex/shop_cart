@@ -13,7 +13,7 @@ class AddItem extends React.Component {
       <div>
         <form className="row mb-5" onSubmit={(e) => {
             e.preventDefault();
-                this.props.addItem(this.state.productName,this.state.productPrice);
+                this.props.addItem(this.state.productName,Number(this.state.productPrice));
         }}>
           <div className="mb-3 col-4">
             <label htmlFor="inputName" className="form-label">
