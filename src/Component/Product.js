@@ -8,7 +8,9 @@ export default function Product(props) {
       <div className="col-5">
         <h2>
           {props.product.name}
-          <span className="badge text-bg-secondary">₹{props.product.price}</span>
+          <span className="badge text-bg-secondary">
+            ₹{props.product.price}
+          </span>
         </h2>
       </div>
       <div className="col-3">
@@ -17,9 +19,13 @@ export default function Product(props) {
           role="group"
           aria-label="Basic mixed styles example"
         >
-          <button type="button" class="btn btn-danger" onClick={() => {
+          <button
+            type="button"
+            class="btn btn-danger"
+            onClick={() => {
               props.decrementQuantity(props.index);
-            }}>
+            }}
+          >
             -
           </button>
           <button type="button" class="btn btn-warning">
@@ -39,10 +45,14 @@ export default function Product(props) {
       <div className="col-2">
         {props.product.quantity * props.product.price}
       </div>
-        <button className="col-2 btn btn-danger">
-          Remove
-        </button>
-      </div>
-
+      <button
+        className="col-2 btn btn-danger"
+        onClick={() => {
+          props.removeItem(props.index);
+        }}
+      >
+        Remove
+      </button>
+    </div>
   );
 }
