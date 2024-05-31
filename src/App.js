@@ -9,7 +9,7 @@ import AddItem from "./Component/Additem.js";
 function App() {
   let products = [
     {
-      price: 99999,
+      price: 109999,
       name: "iPhone 15 Pro",
       quantity: 0,
     },
