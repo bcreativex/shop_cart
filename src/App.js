@@ -15,7 +15,7 @@ function App() {
     },
     {
       price: 89999,
-      name: "Realme 15 Pro",
+      name: "Samsung S23 Ultra",
       quantity: 0,
     },
   ];
